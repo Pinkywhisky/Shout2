@@ -60,7 +60,7 @@ namespace Shout.Controllers
             {
                 _context.Add(users);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("SignIn", "Auth");
+                return RedirectToAction("SignIn", "Auth"); // pour faire une redirection de page, il faut mettre le chemin à l'envers sans /
             }
             return View(users);
         }
